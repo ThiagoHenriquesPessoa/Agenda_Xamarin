@@ -14,5 +14,10 @@ namespace Agenda_Xamarin
         {
             InitializeComponent();
         }
+
+        private void btnCriar_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
