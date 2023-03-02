@@ -3,10 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Agenda_Xamarin.CriarAcesso">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <StackLayout>
+                <!--Titulo-->
+                <StackLayout Padding="80" VerticalOptions="Start" HorizontalOptions="Center">
+                    <Label Text="Criar Acesso" FontSize="Title" TextColor="Black" FontAttributes="Bold"/>
+                </StackLayout>
+                
+                <!--Tela de Criação-->
+                <StackLayout VerticalOptions="Center">
+                    <Frame BackgroundColor="Transparent" Margin="20">
+                        <StackLayout>
+                            <Label Text="E-Mail" FontSize="Body" TextColor="Black" HorizontalOptions="Start"/>
+                            <Entry x:Name="txtCriarEmail" Keyboard="Email" ReturnType="Next" ClearButtonVisibility="WhileEditing"/>
+
+                            <Label Text="Senha" FontSize="Body" TextColor="Black" HorizontalOptions="Start"/>
+                            <Entry x:Name="txtCriarSenha" Keyboard="Default" ReturnType="Next" IsPassword="True" 
+                                   ClearButtonVisibility="WhileEditing"/>
+
+                            <Label Text="Confirmar Senha" FontSize="Body" TextColor="Black" HorizontalOptions="Start"/>
+                            <Entry x:Name="txtConfirmarSenha" Keyboard="Default" ReturnType="Next" IsPassword="True" 
+                                   ClearButtonVisibility="WhileEditing"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Button x:Name="btnCriarAcesso" Text="Criar" BackgroundColor="Black" TextColor="White" 
+                            CornerRadius="20" HorizontalOptions="Center"/>
+                    <Button x:Name="btnCancelar" Text="Cancelar" FontAttributes="Italic" TextTransform="None" 
+                            BackgroundColor="Transparent" TextColor="Red" CornerRadius="20" HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+            <BoxView x:Name="bvTelaPreta" Color="Black" Opacity="0.5" IsVisible="false"/>
+            <ActivityIndicator x:Name="actRoda" Color="White" IsVisible="false" IsRunning="False" Scale="0.2"/>
+            
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
