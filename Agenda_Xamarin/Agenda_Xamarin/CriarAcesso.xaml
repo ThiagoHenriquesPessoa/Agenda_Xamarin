@@ -28,9 +28,13 @@
                     </Frame>
 
                     <Button x:Name="btnCriarAcesso" Text="Criar" BackgroundColor="Black" TextColor="White" 
-                            CornerRadius="20" HorizontalOptions="Center"/>
+                            CornerRadius="20" HorizontalOptions="Center"
+                            Clicked="btnCriarAcesso_Clicked"/>
+                    
                     <Button x:Name="btnCancelar" Text="Cancelar" FontAttributes="Italic" TextTransform="None" 
-                            BackgroundColor="Transparent" TextColor="Red" CornerRadius="20" HorizontalOptions="Center"/>
+                            BackgroundColor="Transparent" TextColor="Red" CornerRadius="20" HorizontalOptions="Center"
+                            Clicked="btnCancelar_Clicked"/>
+                    
                 </StackLayout>
             </StackLayout>
 
