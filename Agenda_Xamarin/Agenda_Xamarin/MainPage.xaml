@@ -22,20 +22,28 @@
                                ClearButtonVisibility="WhileEditing"/>
                     </StackLayout>
                 </Frame>
+                
                 <Button x:Name="btnLogar" Text="Logar" BackgroundColor="Black" TextColor="White" CornerRadius="20" 
-                        HorizontalOptions="Center"/>
+                        HorizontalOptions="Center"
+                        Clicked="btnLogar_Clicked"/>
+
                 <Button x:Name="btnCriar" Text="Não tem uma conta? Criar uma conta." FontAttributes="Italic" TextTransform="None"
-                        BackgroundColor="Transparent" TextColor="Gray" CornerRadius="20" HorizontalOptions="Center"/>
+                        BackgroundColor="Transparent" TextColor="Gray" CornerRadius="20" HorizontalOptions="Center"
+                        Clicked="btnCriar_Clicked"/>
+                
             </StackLayout>
         </StackLayout>
         
         <!--Botão de Sobre-->
         <StackLayout VerticalOptions="End">
             <Button x:Name="btnSobre" Text="Sobre" FontAttributes="Italic" TextTransform="None" BackgroundColor="Transparent"
-                    TextColor="Gray" CornerRadius="20" HorizontalOptions="Center"/>
+                    TextColor="Gray" CornerRadius="20" HorizontalOptions="Center"
+                    Clicked="btnSobre_Clicked"/>
+            
         </StackLayout>
         <BoxView x:Name="bvTelaPreta" Color="Black" Opacity="0.5" IsVisible="false"/>
         <ActivityIndicator x:Name="actRoda" Color="White" IsVisible="false" IsRunning="False" Scale="0.2"/>
+        
     </Grid>
 
 </ContentPage>
